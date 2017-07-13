@@ -8,9 +8,6 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         int userNum;
-
-        int i;
-
         int square = 0;
         int cube = 0;
         String answer = "yes";
@@ -20,33 +17,36 @@ public class Main {
 
 
             System.out.println("Welcome to the Grand Circus Squarer and Cuber!");
-            System.out.println("Please enter an integer");
+            System.out.println("Please enter an integer: ");
             // wait for the user to enter an iteger
             userNum = scan.nextInt();
             scan.nextLine();
+            System.out.println("Number\t\tSquare\t\t" +
+                    "\tCube");
+            System.out.println("======\t\t======\t\t   ======");
 
-            for (i = 1; i <= userNum; ++i)
-
-                square = ( userNum * userNum);
-
-
-                cube = (userNum * userNum * userNum);
+            for (int i = 1; i <= userNum; i++) {
 
 
-                System.out.println("Number\t\tSquare\t\t" +
-                        "\tCube");
-                System.out.println("======\t\t======\t\t   ======");
+                square = (i * i);
 
-                System.out.println("\t" + userNum + "\t\t\t" + square + "\t\t\t" + cube);
+                cube = (i * i * i);
 
-                System.out.println("If you would like to continue enter yes");
+                System.out.println("\t" + i + "\t\t\t" + square + "\t\t\t" + cube);
 
 
-                answer = scan.nextLine();
             }
-            while (answer.equals("yes"));
+
+
+            System.out.println("If you would like to continue enter yes: ");
+
+
+            answer = scan.nextLine();
 
         }
-
+        while (answer.equals("yes"));
 
     }
+
+
+}
